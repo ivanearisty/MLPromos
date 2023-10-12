@@ -9,6 +9,11 @@ async def get_tweets_before_date(target_date):
     tweets = await cursor.to_list(length=None)
     return tweets
 
+async def get_all_tweets(received_data):
+    cursor = db['tweets'].find({}) 
+    tweets = await cursor.to_list(length=None)
+    return tweets
+
 # Method to add random tweets data to the database
 async def add_random_tweets_data(num_tweets):
     current_datetime = datetime.datetime.now()

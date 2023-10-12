@@ -6,4 +6,4 @@ DATABASE_URL = f"mongodb://{parameters.mongodb_user}:{parameters.mongodb_passwor
 
 db = AsyncIOMotorClient(DATABASE_URL)[parameters.mongodb_database]
 
-#mongodb://admin:password@localhost:27017
+#mongodb://admin:e4yX8152tnKg@localhost:27017

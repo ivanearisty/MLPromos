@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import Depends, FastAPI, WebSocket, WebSocketDisconnect
 
 from modules.websockets import ConnectionManager
+from services.twitter import get_tweets_before_date, add_random_tweets_data, get_all_tweets
 
 
 app = FastAPI(
@@ -32,12 +33,16 @@ async def test():
 
 @app.websocket("/websocket")
 async def websocket_endpoint(websocket: WebSocket):
+    logger.info("websocket invoked")
     await websockets_manager.connect(websocket)
     try:
         while True:
-            data = await websocket.receive_json()
-            logger.info(data)
-            await websocket.send_json(dumps(data))
+            received_data = await websocket.receive_json()
+            await add_random_tweets_data(10)
+            logger.info(received_data)
+            tweetsBefore = await get_all_tweets(received_data)
+            logger.info(tweetsBefore)
+            await websocket.send_json(dumps(tweetsBefore))
     except WebSocketDisconnect:
         await websockets_manager.disconnect(websocket)
 

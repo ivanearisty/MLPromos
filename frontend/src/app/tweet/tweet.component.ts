@@ -10,12 +10,12 @@ export interface Tweet {
   template: `
     <div class="tweet-item">
       <div class="tweet-content">{{ tweet.text }}</div>
-      <div class="tweet-date">{{ tweet.date | date:'short' }}</div>
+      <div class="tweet-date">{{ tweet.date | date:'medium' }}</div>
     </div>
   `,
   styles: [`
     .tweet-item {
-      border: 1px solid #eee;
+      border: 2px solid #eee;
       padding: 10px;
       margin-bottom: 10px;
     }

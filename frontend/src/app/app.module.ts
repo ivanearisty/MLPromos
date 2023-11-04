@@ -7,14 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { TweetItemComponent } from './tweet/tweet.component';
 import { TweetListComponent } from './tweet-list/tweet-list.component';
-import { TweetListTestDataComponent } from './tweet-list-test-data/tweet-list-test-data.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     TweetItemComponent,
-    TweetListComponent,
-    TweetListTestDataComponent],
+    TweetListComponent],
 
   imports: [
     BrowserModule,
@@ -27,5 +26,5 @@ import { TweetListTestDataComponent } from './tweet-list-test-data/tweet-list-te
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 }

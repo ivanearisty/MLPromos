@@ -29,3 +29,22 @@ db.createCollection("tweets", {
       }
     }
   });  
+
+  db.createCollection("modelTweets", {
+    validator: {
+      $jsonSchema: {
+        bsonType: "object",
+        required: ["date", "text"],
+        properties: {
+          date: {
+            bsonType: "date",
+            description: "The date of the tweet."
+          },
+          text: {
+            bsonType: "string",
+            description: "The text of the tweet."
+          }
+        }
+      }
+    }
+  });  

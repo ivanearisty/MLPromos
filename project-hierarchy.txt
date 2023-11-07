@@ -1,0 +1,102 @@
+ML_delivery_scraper
+├─ LICENSE
+├─ README.md
+├─ backend
+│  ├─ mlmodel
+│  │  ├─ accounts.db
+│  │  ├─ annotations.json
+│  │  ├─ config.cfg
+│  │  ├─ data.jsonl
+│  │  ├─ model-best
+│  │  │  ├─ config.cfg
+│  │  │  ├─ meta.json
+│  │  │  ├─ ner
+│  │  │  │  ├─ cfg
+│  │  │  │  ├─ model
+│  │  │  │  └─ moves
+│  │  │  ├─ tok2vec
+│  │  │  │  ├─ cfg
+│  │  │  │  └─ model
+│  │  │  ├─ tokenizer
+│  │  │  └─ vocab
+│  │  │     ├─ key2row
+│  │  │     ├─ lookups.bin
+│  │  │     ├─ strings.json
+│  │  │     ├─ vectors
+│  │  │     └─ vectors.cfg
+│  │  ├─ model-last
+│  │  │  ├─ config.cfg
+│  │  │  ├─ meta.json
+│  │  │  ├─ ner
+│  │  │  │  ├─ cfg
+│  │  │  │  ├─ model
+│  │  │  │  └─ moves
+│  │  │  ├─ tok2vec
+│  │  │  │  ├─ cfg
+│  │  │  │  └─ model
+│  │  │  ├─ tokenizer
+│  │  │  └─ vocab
+│  │  │     ├─ key2row
+│  │  │     ├─ lookups.bin
+│  │  │     ├─ strings.json
+│  │  │     ├─ vectors
+│  │  │     └─ vectors.cfg
+│  │  ├─ model.ipynb
+│  │  ├─ output.txt
+│  │  ├─ outputfile.json
+│  │  ├─ scraper.py
+│  │  ├─ scraperNB.ipynb
+│  │  ├─ secret.py
+│  │  ├─ text_extraction_io_format_1.0.0.yaml
+│  │  └─ training_data.spacy
+│  ├─ poetry.lock
+│  ├─ pyproject.toml
+│  └─ src
+│     ├─ database
+│     │  └─ database.py
+│     ├─ main.py
+│     ├─ modules
+│     │  ├─ model.py
+│     │  ├─ parameters.py
+│     │  ├─ test.ipynb
+│     │  └─ websockets.py
+│     └─ services
+│        └─ twitter.py
+├─ docker-compose.yaml
+├─ frontend
+│  ├─ .editorconfig
+│  ├─ nx.json
+│  ├─ package-lock.json
+│  ├─ package.json
+│  ├─ project.json
+│  ├─ src
+│  │  ├─ app
+│  │  │  ├─ app-routing.module.ts
+│  │  │  ├─ app.component.html
+│  │  │  ├─ app.component.scss
+│  │  │  ├─ app.component.spec.ts
+│  │  │  ├─ app.component.ts
+│  │  │  ├─ app.module.ts
+│  │  │  ├─ services
+│  │  │  │  └─ socket-service.service.ts
+│  │  │  ├─ tweet
+│  │  │  │  ├─ tweet.component.spec.ts
+│  │  │  │  └─ tweet.component.ts
+│  │  │  └─ tweet-list
+│  │  │     ├─ tweet-list.component.spec.ts
+│  │  │     └─ tweet-list.component.ts
+│  │  ├─ assets
+│  │  │  └─ .gitkeep
+│  │  ├─ environments
+│  │  │  ├─ environment.development.ts
+│  │  │  └─ environment.ts
+│  │  ├─ favicon.ico
+│  │  ├─ index.html
+│  │  ├─ main.ts
+│  │  └─ styles.scss
+│  ├─ tsconfig.app.json
+│  ├─ tsconfig.json
+│  └─ tsconfig.spec.json
+├─ mongo-init.js
+├─ personal-guide.md
+└─ project-hierarchy.txt

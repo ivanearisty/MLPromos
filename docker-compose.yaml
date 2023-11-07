@@ -1,6 +1,24 @@
 version: '3.9'
 
 services:
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "80:80"  # Adjust the port if needed
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    ports:
+      - 8000:8000  # Adjust the port if needed
+    depends_on:
+      - mongo
+
   mongo:
     image: mongo:latest
     container_name: mydatabase

@@ -5,7 +5,7 @@ from modules.parameters import parameters
 
 
 class Model:
-    nlp = spacy.load(parameters.modelLocation)
+    nlp = spacy.load("src/modules/model-best")
 
 async def evaluate(eval: str) -> str:
     doc = Model.nlp(eval)

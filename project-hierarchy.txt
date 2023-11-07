@@ -1,7 +1,10 @@
 ML_delivery_scraper
+├─ .dockerignore
 ├─ LICENSE
 ├─ README.md
 ├─ backend
+│  ├─ .dockerignore
+│  ├─ Dockerfile
 │  ├─ mlmodel
 │  │  ├─ accounts.db
 │  │  ├─ annotations.json
@@ -51,11 +54,29 @@ ML_delivery_scraper
 │  │  └─ training_data.spacy
 │  ├─ poetry.lock
 │  ├─ pyproject.toml
+│  ├─ requirements.txt
 │  └─ src
 │     ├─ database
 │     │  └─ database.py
 │     ├─ main.py
 │     ├─ modules
+│     │  ├─ model-best
+│     │  │  ├─ config.cfg
+│     │  │  ├─ meta.json
+│     │  │  ├─ ner
+│     │  │  │  ├─ cfg
+│     │  │  │  ├─ model
+│     │  │  │  └─ moves
+│     │  │  ├─ tok2vec
+│     │  │  │  ├─ cfg
+│     │  │  │  └─ model
+│     │  │  ├─ tokenizer
+│     │  │  └─ vocab
+│     │  │     ├─ key2row
+│     │  │     ├─ lookups.bin
+│     │  │     ├─ strings.json
+│     │  │     ├─ vectors
+│     │  │     └─ vectors.cfg
 │     │  ├─ model.py
 │     │  ├─ parameters.py
 │     │  ├─ test.ipynb
@@ -99,4 +120,5 @@ ML_delivery_scraper
 │  └─ tsconfig.spec.json
 ├─ mongo-init.js
 ├─ personal-guide.md
-└─ project-hierarchy.txt
+├─ project-hierarchy.txt
+└─ requirements.txt

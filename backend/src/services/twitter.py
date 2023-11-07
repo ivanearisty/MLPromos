@@ -66,7 +66,7 @@ async def gen_sample_tweet() -> dict:
     
     tweet = {
         'date': datetime.datetime.now(),
-        'text': "this is a manually added test tweet"
+        'text': "Use code NYC40 on Postmates for $15 off, $30 minimum."
     }
     return tweet
 

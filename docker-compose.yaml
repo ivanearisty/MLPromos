@@ -2,15 +2,15 @@ version: '3.9'
 
 services:
 
-  frontend:
+  frontend-app:
     build:
       context: ./frontend
     ports:
-      - "80:80"  # Adjust the port if needed
+      - "4200:4200"  # Adjust the port if needed
     depends_on:
-      - backend
+      - my-backend-image
 
-  backend:
+  my-backend-image:
     build:
       context: ./backend
       dockerfile: ./Dockerfile

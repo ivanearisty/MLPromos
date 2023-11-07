@@ -6,3 +6,4 @@ mlmodel/secret.py
 backend/mlmodel/secret.py
 backend/mlmodel/accounts.db
 backend/mlmodel/__pycache__/secret.cpython-311.pyc
+backend/mlmodel/google-cloud-sdk

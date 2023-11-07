@@ -4,5 +4,6 @@ class Parameters:
     mongodb_host = "localhost" 
     mongodb_port = 27017
     mongodb_database = "mydatabase"
+    modelLocation = "../../mlmodel/model-best"
 
 parameters = Parameters()

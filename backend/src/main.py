@@ -46,8 +46,7 @@ async def websocket_endpoint(websocket: WebSocket):
     try:
         tweets = await get_all_tweets()
         await websocket.send_json(dumps(tweets))
-    
-        #Implement get new tweets and logic to send new tweets to websocket when they are added
+        #TODO: Implement get new tweets and logic to send new tweets to websocket when they are added
         new_tweets = await get_new_tweets()
         if new_tweets:
             await websocket.send_json({"tweets": new_tweets})

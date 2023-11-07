@@ -40,7 +40,7 @@ export class TweetListComponent implements OnDestroy{
   constructor(private socketService: SocketService) {}
   
   initWebSocket() {
-    this.tweets.push(...this.initialTestTweets);
+    // this.tweets.push(...this.initialTestTweets);
     console.log("Initializing Websocket Connection");
     this.socketSubscription = this.socketService.socket.pipe(
       map((message: any) => {

@@ -3,7 +3,7 @@ from datetime import datetime as dt
 import datetime
 import time
 from loguru import logger
-
+from modules.model import evaluate
 from database.database import db
 
 MAX_LIST_LENGTH = 400
@@ -24,16 +24,21 @@ async def get_all_tweets():
     tweets = await cursor.to_list(length=MAX_LIST_LENGTH)
     
     # Format dates and serialize to JSON
-    formatted_tweets = [
-        {
-            "date": tweet["date"].isoformat(),
-            "text": tweet["text"],
-            # Add other properties as needed
-        }
-        for tweet in tweets
-    ]
+    formatted_tweets = []
 
+    for tweet in tweets:
+        tweet_text = tweet["text"]
+        evaluated_text = await evaluate(tweet_text)
+        
+        if evaluated_text:  # Check if evaluate returns a non-empty string
+            formatted_tweets.append({
+                "date": tweet["date"].isoformat(),
+                "text": evaluated_text,
+                # Add other properties as needed
+            })
+    
     return formatted_tweets
+
 
 # Method to add random tweets data to the database
 async def add_random_tweets_data(num_tweets):
@@ -46,6 +51,17 @@ async def add_random_tweets_data(num_tweets):
         }
         await db['tweets'].insert_one(tweet)
 
+    tweet2 = {
+        'date': current_datetime - datetime.timedelta(days=random.randint(1, 4)),
+        'text': 'Use code CRAZYDEAL2020 on Postmates for $15 off!!'
+    }
+    tweet3 = {
+        'date': current_datetime - datetime.timedelta(days=random.randint(1, 4)),
+        'text': 'Use code NYC40 on Postmates for $15 off, $30 minimum.'
+    }
+    await db['tweets'].insert_one(tweet2)
+    await db['tweets'].insert_one(tweet3)
+
 async def gen_sample_tweet() -> dict: 
     
     tweet = {
@@ -54,6 +70,7 @@ async def gen_sample_tweet() -> dict:
     }
     return tweet
 
+#TODO: Implement new tweets functionality
 async def get_new_tweets():
     logger.info("get new tweets polled")
     return 

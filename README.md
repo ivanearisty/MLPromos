@@ -1,5 +1,7 @@
 ## How-to guide
 
+Go to Hackathon Submission for Hackathon Submission. This branch has been updated post the submission deadline and might not be fully functional.
+
 1. Download Docker Desktop
 2. Download the entire source code for the project
 3. From the root project directory, run:

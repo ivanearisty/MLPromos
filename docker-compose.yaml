@@ -3,19 +3,22 @@ version: '3.9'
 services:
 
   frontend-app:
+    container_name: frontend
     build:
       context: ./frontend
+      dockerfile: ./Dockerfile
     ports:
-      - "4200:4200"  # Adjust the port if needed
+      - "4200:4200"
     depends_on:
       - my-backend-image
 
   my-backend-image:
+    container_name: backend
     build:
       context: ./backend
       dockerfile: ./Dockerfile
     ports:
-      - 8000:8000  # Adjust the port if needed
+      - 8000:8000
     depends_on:
       - mongo
 

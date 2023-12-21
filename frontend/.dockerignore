@@ -1,0 +1,22 @@
+# Node modules
+node_modules
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Directory for editor configurations
+.vscode
+
+# Optional: ignore development specific files
+*.env.development
+*.config.development.json
+
+# Ignore all other unnecessary files
+.git
+.gitignore
+.dockerignore
+README.md
+LICENSE
+.DS_Store

@@ -85,40 +85,28 @@ ML_delivery_scraper
 │        └─ twitter.py
 ├─ docker-compose.yaml
 ├─ frontend
-│  ├─ .editorconfig
-│  ├─ nx.json
+│  ├─ Dockerfile
+│  ├─ README.md
+│  ├─ angular.json
 │  ├─ package-lock.json
 │  ├─ package.json
-│  ├─ project.json
 │  ├─ src
 │  │  ├─ app
-│  │  │  ├─ app-routing.module.ts
 │  │  │  ├─ app.component.html
-│  │  │  ├─ app.component.scss
-│  │  │  ├─ app.component.spec.ts
 │  │  │  ├─ app.component.ts
-│  │  │  ├─ app.module.ts
-│  │  │  ├─ services
-│  │  │  │  └─ socket-service.service.ts
-│  │  │  ├─ tweet
-│  │  │  │  ├─ tweet.component.spec.ts
-│  │  │  │  └─ tweet.component.ts
-│  │  │  └─ tweet-list
-│  │  │     ├─ tweet-list.component.spec.ts
-│  │  │     └─ tweet-list.component.ts
+│  │  │  ├─ app.config.ts
+│  │  │  ├─ app.routes.ts
+│  │  │  ├─ environments
+│  │  │  │  └─ environments.ts
+│  │  │  ├─ tweet-list.component.ts
+│  │  │  ├─ tweet.component.ts
+│  │  │  └─ websocket.service.ts
 │  │  ├─ assets
 │  │  │  └─ .gitkeep
-│  │  ├─ environments
-│  │  │  ├─ environment.development.ts
-│  │  │  └─ environment.ts
-│  │  ├─ favicon.ico
 │  │  ├─ index.html
 │  │  ├─ main.ts
 │  │  └─ styles.scss
 │  ├─ tsconfig.app.json
-│  ├─ tsconfig.json
-│  └─ tsconfig.spec.json
+│  └─ tsconfig.json
 ├─ mongo-init.js
-├─ personal-guide.md
-├─ project-hierarchy.txt
-└─ requirements.txt
+└─ personal-guide.md

@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "watch": "ng build --watch --configuration development"
+    "watch": "ng build --watch --configuration development",
+    "docker": "ng serve --host 0.0.0.0 --port 4200 --disable-host-check --open=false",
+    "docker2": "ng serve --host 0.0.0.0 --port 4200 --open=false"
   },
   "private": true,
   "dependencies": {
